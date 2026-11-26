@@ -1,0 +1,25 @@
+/* =====================================================
+  responsive.css - Phụ trách: Minh
+  Viết quy tắc cho: desktop (>1024px), tablet (<=1024px),
+  mobile (<=768px, <=480px).
+  Lưu ý: Vy đã viết sẵn menu hamburger tối thiểu ở cuối
+  style.css (mục 8) - Minh có thể chuyển về đây.
+  ===================================================== */
+
+
+/* TABLET */
+@media (max-width: 1024px) {
+ /* TODO (Minh) */
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+ /* TODO (Minh) */
+}
+
+
+/* MOBILE NHỎ */
+@media (max-width: 480px) {
+ /* TODO (Minh) */
+}
