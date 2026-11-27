@@ -7,9 +7,18 @@
   - Lưu góp ý vào localStorage
   ===================================================== */
 
+$(function () {
+  const hash = window.location.hash;
+  if (hash === "#register" || hash === "#login") {
+    $('[data-tab="' + hash.slice(1) + '"]').trigger("click");
+  }
+});
+
+
+
 
 $(document).ready(function () {
- // TODO (Hanh)
+ // TODO (HOANG ANH)
 });
 
 
