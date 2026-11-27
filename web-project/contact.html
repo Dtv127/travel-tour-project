@@ -28,13 +28,116 @@
  </header>
 
 
- <!-- ========== NỘI DUNG - TUYỀN CODE TẠI ĐÂY ========== -->
+<!-- ========== TIÊU ĐỀ TRANG ========== -->
+ <section class="page-hero">
+   <h1>Liên hệ &amp; Tài khoản</h1>
+   <p>Gửi góp ý cho nhóm hoặc quản lý tài khoản của bạn</p>
+ </section>
+
+
+ <!-- ========== NỘI DUNG ========== -->
  <main class="section">
-   <div class="container">
-     <div class="section-head">
-       <h2>Liên hệ</h2>
-       <p>TODO (Tuyền): form Liên hệ/Góp ý + tab Đăng ký, Đăng nhập, Đổi mật khẩu.</p>
+   <div class="container contact-grid">
+
+     <!-- Cột trái: Liên hệ / Góp ý -->
+     <div class="panel">
+       <h3>✉️ Liên hệ / Góp ý</h3>
+       <ul class="info-list">
+         <li>📍 TP. Hồ Chí Minh, Việt Nam</li>
+         <li>✉️ nhom@vietnamtravel.edu.vn</li>
+         <li>📞 0123 456 789</li>
+       </ul>
+
+       <form id="form-feedback" novalidate>
+         <div class="form-group">
+           <label for="fb-name">Họ và tên *</label>
+           <input type="text" id="fb-name" placeholder="Nguyễn Văn A">
+         </div>
+         <div class="form-group">
+           <label for="fb-email">Email *</label>
+           <input type="email" id="fb-email" placeholder="ban@example.com">
+         </div>
+         <div class="form-group">
+           <label for="fb-content">Nội dung *</label>
+           <textarea id="fb-content" placeholder="Nhập góp ý hoặc câu hỏi của bạn..."></textarea>
+         </div>
+         <button type="submit" class="btn btn-primary btn-block">Gửi góp ý</button>
+         <p class="msg" aria-live="polite"></p>
+       </form>
      </div>
+
+     <!-- Cột phải: Tài khoản -->
+     <div class="panel">
+       <h3>👤 Tài khoản</h3>
+       <div class="account-status" id="account-status"></div>
+
+       <div class="tabs">
+         <button type="button" class="tab-btn active" data-tab="login">Đăng nhập</button>
+         <button type="button" class="tab-btn" data-tab="register">Đăng ký</button>
+         <button type="button" class="tab-btn" data-tab="change-pass">Đổi mật khẩu</button>
+       </div>
+
+       <!-- Đăng nhập -->
+       <div class="tab-panel active" id="tab-login">
+         <form id="form-login" novalidate>
+           <div class="form-group">
+             <label for="login-email">Email</label>
+             <input type="email" id="login-email" placeholder="ban@example.com" autocomplete="username">
+           </div>
+           <div class="form-group">
+             <label for="login-pass">Mật khẩu</label>
+             <input type="password" id="login-pass" autocomplete="current-password">
+           </div>
+           <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
+           <p class="msg" aria-live="polite"></p>
+         </form>
+       </div>
+
+       <!-- Đăng ký -->
+       <div class="tab-panel" id="tab-register">
+         <form id="form-register" novalidate>
+           <div class="form-group">
+             <label for="reg-name">Họ và tên</label>
+             <input type="text" id="reg-name" autocomplete="name">
+           </div>
+           <div class="form-group">
+             <label for="reg-email">Email</label>
+             <input type="email" id="reg-email" autocomplete="email">
+           </div>
+           <div class="form-group">
+             <label for="reg-pass">Mật khẩu (ít nhất 6 ký tự)</label>
+             <input type="password" id="reg-pass" autocomplete="new-password">
+           </div>
+           <div class="form-group">
+             <label for="reg-pass2">Nhập lại mật khẩu</label>
+             <input type="password" id="reg-pass2" autocomplete="new-password">
+           </div>
+           <button type="submit" class="btn btn-primary btn-block">Đăng ký</button>
+           <p class="msg" aria-live="polite"></p>
+         </form>
+       </div>
+
+       <!-- Đổi mật khẩu -->
+       <div class="tab-panel" id="tab-change-pass">
+         <form id="form-change-pass" novalidate>
+           <div class="form-group">
+             <label for="cp-old">Mật khẩu cũ</label>
+             <input type="password" id="cp-old" autocomplete="current-password">
+           </div>
+           <div class="form-group">
+             <label for="cp-new">Mật khẩu mới</label>
+             <input type="password" id="cp-new" autocomplete="new-password">
+           </div>
+           <div class="form-group">
+             <label for="cp-new2">Nhập lại mật khẩu mới</label>
+             <input type="password" id="cp-new2" autocomplete="new-password">
+           </div>
+           <button type="submit" class="btn btn-primary btn-block">Đổi mật khẩu</button>
+           <p class="msg" aria-live="polite"></p>
+         </form>
+       </div>
+     </div>
+
    </div>
  </main>
 
